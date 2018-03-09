@@ -1,0 +1,20 @@
+extends ../_layouts/base
+
+block main
+  h2(class='font-bold text-xl mb-4 mt-2 text-grey-darker') Largest Prime Factor
+  p(class="text-grey-dark mb-8") In number theory, the prime factors of a positive integer are the prime numbers that divide that integer exactly. Example input: #[code 13195], the expected output will be: #[code 29]
+
+  form(class="w-full max-w-sm" method="post")
+    div(class="mb-6")
+      label(class="block text-grey-darker py-2" for="input-num") Input a Number
+      input(class="bg-grey-lighter appearance-none border-2 border-grey hover:border-purple rounded w-full py-2 px-4 text-grey-darker" type="number" placeholder="Input a number" name="num" id="input-num" value=num required)
+    div(class="mb-6")
+      button(class="shadow bg-purple-dark hover:bg-purple text-white font-bold py-2 px-4 rounded" type="submit") Calculate
+
+  hr(class="border my-6")
+
+  div(class="w-full max-w-sm my-5")
+      label(class="block text-grey-darker py-2" for="text-answer") Answer
+      textarea(disabled class="bg-grey-lighter appearance-none border-2 border-grey rounded w-full py-2 px-4 text-grey-darker disable" placeholder="Click the `Calculate` button to see the answer." id="text-answer") #{largestPrimeFactor}
+
+  hr

@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "plugins": [],
+  "rules": {
+    "no-param-reassign": 0
+  }
+}

@@ -1,0 +1,7 @@
+//- Render top navigation menu
+mixin renderTopNavigation(currentActiveId, menuItems)
+  ul(class="list-reset flex my-4" id="page-nav")
+    for item in menuItems
+      - const activeClass = (item.id === currentActiveId) ? "active" : "";
+      li(class="mr-3")
+        a(class="inline-block rounded text-indigo-dark bg-blue-lightest py-3 px-4 " + activeClass href=item.url) #{item.title}

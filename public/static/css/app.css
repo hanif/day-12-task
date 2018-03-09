@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.25rem;
+}
+
+h1 {
+  text-shadow: 0 .2rem 1rem rgba(255, 255, 255, .5);
+}
+
+code {
+  display: inline-block;
+  background-color: #eee;
+  border: 1px #ddd solid;
+  padding: .1rem .2rem;
+  border-radius: .2rem;
+  font-size: .9rem;
+}
+
+textarea.error-stack {
+  font-family: "Courier New";
+  font-size: .9rem;
+  background-color: #eee;
+  resize: both;
+  width: 100%;
+}
+
+/* page nav */
+
+#page-nav {
+  font-size: .85rem;
+}
+
+#page-nav a {
+  text-transform: uppercase;
+}
+
+#page-nav a.active {
+  background-color: #2F365F !important;
+  color: #fff !important;
+}

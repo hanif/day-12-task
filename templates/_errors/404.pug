@@ -1,0 +1,26 @@
+include ../_mixins/nav.pug
+include ../_mixins/messages.pug
+
+doctype html
+html
+  head
+    title #{title}
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(href='/static/css/app.css', rel='stylesheet')
+
+    block head
+
+  body(class='bg-grey')
+    div(class='container mx-auto mt-8')
+      div(class='max-w-md rounded overflow-hidden shadow-lg mx-auto bg-white')
+        div(class='px-6 py-4')
+
+          h2(class='font-bold text-3xl mb-2 text-grey-dark mt-4') #{title}
+
+          hr(class="border my-4")
+          
+          p(class='text-grey-darker text-base') We are sorry, the page you are looking for does not exists, #[br] but you can always #[a(href="/") back home] &rarr;
+
+          hr
+
+    block body

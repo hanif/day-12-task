@@ -1,0 +1,31 @@
+include ../_mixins/nav.pug
+include ../_mixins/messages.pug
+
+doctype html
+html
+  head
+    title #{title}
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(href='/static/css/app.css', rel='stylesheet')
+
+    block head
+
+  body(class='bg-grey')
+    div(class='container mx-auto mt-8')
+
+      div(class='max-w-md overflow-hidden mx-auto')
+        h1(class="text-grey-dark mb-6") Task Day #12
+
+      div(class='max-w-md rounded overflow-hidden shadow-lg mx-auto bg-white')
+        div(class='px-6 py-4')
+
+          +renderTopNavigation(navId, [
+            { id: "even-fibo", url: "/even-fibo", title: "Even Fibonacci" },
+            { id: "largest-prime-factor", url: "/largest-prime-factor", title: "Largest Prime Factor" }
+          ])
+
+          hr(class="border my-6")
+          
+          block main
+
+    block body

@@ -1,0 +1,27 @@
+include ../_mixins/nav.pug
+include ../_mixins/messages.pug
+
+doctype html
+html
+  head
+    title #{title}
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+    link(href='/static/css/app.css', rel='stylesheet')
+
+    block head
+
+  body(class='bg-grey')
+    div(class='container mx-auto mt-8')
+      div(class='max-w-md rounded overflow-hidden shadow-lg mx-auto bg-white')
+        div(class='px-6 py-4')
+
+          h2(class='font-bold text-3xl mb-2 text-grey-dark mt-4') #{title}
+
+          hr(class="border my-4")
+          
+          p(class='text-grey-darker text-base') Looks like there was an error processing your request, #[br] Reason / Stack Trace:
+          textarea(class="error-stack my-4 p-2 max-w" rows="5") #{message}
+
+          hr
+
+    block body
