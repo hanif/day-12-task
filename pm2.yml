@@ -2,4 +2,4 @@ apps:
   - script: './src/server.js'
     instances: 1,
     exec_mode: 'cluster'
-    name: 'assignment-01-app'
+    name: 'task-day-12-app'
