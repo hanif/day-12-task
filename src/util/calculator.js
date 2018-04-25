@@ -6,10 +6,10 @@
  */
 function factorsOf(n) {
   const factors = [];
-  for (var i = 2; i <= Math.ceil(Math.sqrt(n)); i++) {
-    if (n % i === 0) {
+  for (let i = 2; i <= Math.ceil(Math.sqrt(n)); i += 1) {
+    if (n % i === 0 && !factors.includes(i)) {
       factors.push(i);
-      factors.push(n/i);
+      factors.push(n / i);
     }
   }
 
@@ -22,9 +22,9 @@ function factorsOf(n) {
  * @returns {array}
  */
 function isPrime(num) {
-  for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
-    if(num % i === 0) {
-      return false; 
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+    if (num % i === 0) {
+      return false;
     }
   }
 
@@ -38,12 +38,14 @@ function isPrime(num) {
  * @returns {array}
  */
 function evenFibo(max) {
-  var a = 1, b = 0, temp;
+  let a = 1;
+  let b = 0;
+  let temp;
   const arr = [];
 
   while (max >= a) {
     temp = a;
-    a = a + b;
+    a += b;
     b = temp;
 
     if (b % 2 === 0) {

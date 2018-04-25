@@ -5,9 +5,10 @@
   },
   "env": {
     "browser": false,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
-  "plugins": [],
+  "plugins": ["jest"],
   "rules": {
     "no-param-reassign": 0
   }
